@@ -9,16 +9,21 @@ public class TrailingZeros {
 
     static int trailingZeroes(int N) {
         // Write your code here
-        if (N < 5)
-            return 0;
-        return (N / 5) + trailingZeroes(N / 5);
+        int trailingZeros = 0;
+        while(N / 5 > 0) {
+            N /= 5;
+            trailingZeros+=N;
+        }
+        return trailingZeros;
     }
 
     @Test
     public void testTrailingZeros() {
         Assertions.assertEquals(1, trailingZeroes(5));
+        Assertions.assertEquals(94, trailingZeroes(384));
     }
 
+    //1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32  33 34 35 36 37 38 39 40
 //    For an integer N find the number of trailing zeroes in N!.
 //
 //    Example 1:
