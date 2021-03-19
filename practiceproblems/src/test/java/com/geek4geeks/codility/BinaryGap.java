@@ -15,13 +15,13 @@ public class BinaryGap {
 
         while (N > 0) {
             if (N % 2 == 1) {
-                if(gapInProgress && gap > maxGap) {
+                if (gapInProgress && gap > maxGap) {
                     maxGap = gap;
                 }
                 gapInProgress = true;
                 gap = 0;
             }
-            if(N % 2 == 0 && gapInProgress) {
+            if (N % 2 == 0 && gapInProgress) {
                 gap++;
             }
 
@@ -62,15 +62,11 @@ public class BinaryGap {
 
     @Test
     public void testBinaryGap() {
-        Assertions.assertEquals(4, solution(529));
-        Assertions.assertEquals(2, solution(9));
-        Assertions.assertEquals(0, solution(15));
-        Assertions.assertEquals(0, solution(32));
-
-        Assertions.assertEquals(4, solution2(529));
-        Assertions.assertEquals(2, solution2(9));
-        Assertions.assertEquals(0, solution2(15));
-        Assertions.assertEquals(0, solution2(32));
+        int[][] testCases = new int[][]{{4, 529}, {2, 9}, {0, 15}, {0, 32}};
+        for (int[] testcase : testCases) {
+            Assertions.assertEquals(testcase[0], solution(testcase[1]));
+            Assertions.assertEquals(testcase[0], solution2(testcase[1]));
+        }
     }
 
 //    A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
