@@ -9,7 +9,28 @@ public class BinaryGap {
 
     //TODO: O(N log N) Need to improve to bring this down to O(N) or less.
 
-    public int solution(int N) {
+    public int solution2(int N) {   // O(log N)
+        int maxGap = 0, gap = 0;
+        boolean gapInProgress = false;
+
+        while (N > 0) {
+            if (N % 2 == 1) {
+                if(gapInProgress && gap > maxGap) {
+                    maxGap = gap;
+                }
+                gapInProgress = true;
+                gap = 0;
+            }
+            if(N % 2 == 0 && gapInProgress) {
+                gap++;
+            }
+
+            N /= 2;
+        }
+        return maxGap;
+    }
+
+    public int solution(int N) {    //O(N log N)
         int maxGap = 0, gap = 0;
         String binaryRep = toBinary(N);
         boolean gapInProgress = false;
@@ -45,6 +66,11 @@ public class BinaryGap {
         Assertions.assertEquals(2, solution(9));
         Assertions.assertEquals(0, solution(15));
         Assertions.assertEquals(0, solution(32));
+
+        Assertions.assertEquals(4, solution2(529));
+        Assertions.assertEquals(2, solution2(9));
+        Assertions.assertEquals(0, solution2(15));
+        Assertions.assertEquals(0, solution2(32));
     }
 
 //    A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
