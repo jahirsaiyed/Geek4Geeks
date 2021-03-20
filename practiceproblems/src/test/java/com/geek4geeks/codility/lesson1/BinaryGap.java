@@ -1,11 +1,11 @@
-package com.geek4geeks.codility;
+package com.geek4geeks.codility.lesson1;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class Lesson1BinaryGap {
+public class BinaryGap {
 
     //TODO: O(N log N) Need to improve to bring this down to O(N) or less.
 

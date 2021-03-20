@@ -1,13 +1,14 @@
-package com.geek4geeks.codility;
+package com.geek4geeks.codility.lesson2;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class Lesson2CyclicRotation {
+public class CyclicRotation {
 
     public int[] solution(int[] A, int K) {
+        if(A.length==0) return A;
         for (int i = 0; i < K; i++) {
             rotateRight(A);
         }
@@ -28,6 +29,7 @@ public class Lesson2CyclicRotation {
         TestCase[] testcases = new TestCase[]{
                 new TestCase(new int[]{9, 7, 6, 3, 8}, new int[]{3, 8, 9, 7, 6}, 3),
                 new TestCase(new int[]{1, 2, 3, 4}, new int[]{1, 2, 3, 4}, 4),
+                new TestCase(new int[]{}, new int[]{}, 1),
         };
 
         for (TestCase testcase : testcases) {

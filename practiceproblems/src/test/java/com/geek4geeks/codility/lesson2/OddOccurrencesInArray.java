@@ -1,12 +1,11 @@
-package com.geek4geeks.codility;
+package com.geek4geeks.codility.lesson2;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 
 @SpringBootTest
-public class Lesson2OddOccurrencesInArray {
+public class OddOccurrencesInArray {
 
     public static int solution(int[] A) {
         int number = 0;
