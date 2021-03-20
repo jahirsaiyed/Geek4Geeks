@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.HashSet;
-
 @SpringBootTest
 public class ReduceValueToZero {
 
@@ -29,7 +27,7 @@ public class ReduceValueToZero {
 
     @Test
     public void testReduceValueToZero() {
-        System.out.println(solution("00011100"));
+        Assertions.assertEquals(7, solution("00011100"));
     }
 
 
