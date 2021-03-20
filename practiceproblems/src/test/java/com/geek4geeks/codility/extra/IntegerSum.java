@@ -1,4 +1,4 @@
-package com.geek4geeks.array;
+package com.geek4geeks.codility.extra;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -46,30 +46,5 @@ public class IntegerSum {
         Assertions.assertEquals(743, solution1(734));
         Assertions.assertEquals(2089, solution1(1990));
     }
-
-//    @Test
-//    public void testArrayRowColumnSum() {
-//        Assertions.assertEquals(37, solution1(28));
-//        Assertions.assertEquals(743, solution1(734));
-//        Assertions.assertEquals(2089, solution1(1990));
-//    }
-
-
-//    I have a binary matrix with only 2 rows and N columns.
-//
-//    The sum of elements in first row is A and sum of elements in 2nd row is B.
-//
-//    The sum of columns is stored in an array C.
-//
-//    If A = 3, B = 2, C = [2,1,1,0,1] Then output is "11001,10100"
-//
-//    Explanation:
-//            11001 = sum of 1st row is A = 3
-//10100 = sum of 2nd row is B = 2
-//
-//21101 --> This is column sum which indicates Array C.
-//    Another example:
-//
-//    If A = 2, B = 3, C = [0,0,1,1,2] Then output is "NO"
 
 }

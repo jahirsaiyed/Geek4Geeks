@@ -1,4 +1,4 @@
-package com.geek4geeks.array;
+package com.geek4geeks.codility.extra;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
