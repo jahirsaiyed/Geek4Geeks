@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class BinaryGap {
+public class Lesson1BinaryGap {
 
     //TODO: O(N log N) Need to improve to bring this down to O(N) or less.
 
