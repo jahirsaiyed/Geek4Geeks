@@ -17,8 +17,8 @@ public class MinimumBribes {
              if (bribe > 2) {
                  System.out.println("Too chaotic");
                  return -1;
-             } else if(bribe < 0) {
-                 totalBribes += (-1*bribe);
+             } else if(bribe > 0) {
+                 totalBribes += bribe;
              }
         }
         return totalBribes;
