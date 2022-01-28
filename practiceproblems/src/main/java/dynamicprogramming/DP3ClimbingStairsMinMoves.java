@@ -1,6 +1,6 @@
 package dynamicprogramming;
 
-public class DP2ClimbingStairsVariableJumps {
+public class DP3ClimbingStairsMinMoves {
     public static void main(String[] args) {
         int[] jumps = new int[]{1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
         System.out.println(countMinJumps(jumps));
